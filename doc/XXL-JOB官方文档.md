@@ -293,7 +293,7 @@ XXL-JOB是一个轻量级分布式任务调度框架，其核心设计目标是�
     xxl.job.accessToken=
         
     ### xxl-job log path：执行器运行日志文件存储的磁盘位置，需要对该路径拥有读写权限
-    xxl.job.executor.logpath=/data/applogs/xxl-job/jobhandler/
+    xxl.job.executor.logpath=/home/work/logs/xxl-job/jobhandler/
     
     ### xxl-job log retention days：执行器Log文件定期清理功能，指定日志保存天数，日志文件过期自动删除。限制至少保持3天，否则功能不生效；
     xxl.job.executor.logretentiondays=-1
@@ -801,7 +801,7 @@ XXL-JOB会为每次调度请求生成一个单独的日志文件，需要通过 
 
 (历史版本通过重写LOG4J的Appender实现，存在依赖限制，该方式在新版本已经被抛弃)
 
-日志文件存放的位置可在“执行器”配置文件进行自定义，默认目录格式为：/data/applogs/xxl-job/jobhandler/“格式化日期”/“数据库调度日志记录的主键ID.log”。
+日志文件存放的位置可在“执行器”配置文件进行自定义，默认目录格式为：/home/work/logs/xxl-job/jobhandler/“格式化日期”/“数据库调度日志记录的主键ID.log”。
 
 在JobHandler中开启子线程时，子线程将会将会把日志打印在父线程即JobHandler的执行日志中，方便日志追踪。
 
