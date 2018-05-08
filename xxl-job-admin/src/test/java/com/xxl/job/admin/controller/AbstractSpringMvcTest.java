@@ -17,6 +17,9 @@ public class AbstractSpringMvcTest {
 
   @Autowired
   private WebApplicationContext applicationContext;
+  /**
+   * 使用mockMvc，会创建整套完整SpringMVC 流程，模拟从前端发出的请求,需要加载配置文件
+   */
   protected MockMvc mockMvc;
 
   @Before

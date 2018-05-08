@@ -292,6 +292,10 @@ public class XxlJobServiceImpl implements XxlJobService {
 		}
 	}
 
+	/**
+	 * 仪表盘信息
+	 * @return
+	 */
 	@Override
 	public Map<String, Object> dashboardInfo() {
 

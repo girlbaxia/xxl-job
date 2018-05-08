@@ -45,6 +45,7 @@
 		<quartz.version>2.3.0</quartz.version>
 
 		<spring-boot.version>1.5.10.RELEASE</spring-boot.version>
+		<nexus.url>http://192.168.106.17:7777/nexus</nexus.url>
 	</properties>
 
 	<build>
@@ -163,13 +164,15 @@
 				</plugins>
 			</build>
 			<distributionManagement>
+				<!--快照仓库用于保存开发过程中的不稳定版本-->
 				<snapshotRepository>
 					<id>oss</id>
-					<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+					<url>${nexus.url}/content/repositories/snapshots</url>
 				</snapshotRepository>
+				<!--正式仓库用来保存稳定的发行版本-->
 				<repository>
 					<id>oss</id>
-					<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+					<url>${nexus.url}/content/repositories/releases</url>
 				</repository>
 			</distributionManagement>
 		</profile>
