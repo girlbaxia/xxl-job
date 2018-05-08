@@ -96,7 +96,7 @@
 			<version>${commons-email.version}</version>
 		</dependency>
 
-		<!-- c3p0 -->
+		<!-- c3p0 数据库链接开源项目-->
 		<dependency>
 			<groupId>com.mchange</groupId>
 			<artifactId>c3p0</artifactId>
